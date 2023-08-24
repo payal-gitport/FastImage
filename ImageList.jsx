@@ -8,8 +8,7 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-// import FastImage from 'react-native-fast-image';
-// import LinearGradient from 'react-native-linear-gradient';
+import FastImage from 'react-native-fast-image';
 
 const ImageList = () => {
   const [data, setData] = useState('');
@@ -30,7 +29,7 @@ const ImageList = () => {
       .then(function (response) {
         setData(response.data.feed);
         setIsLoading(false);
-        // console.log(response.data.feed.results[0].url);
+        console.log(response.data.feed.results[0].artworkUrl100);
       })
       .catch(function (error) {
         console.log(error);
@@ -60,10 +59,11 @@ const ImageList = () => {
                 <Text style={styles.listTitle}>{item.name}</Text>
                 <Text style={styles.listText}>{item.artistName}</Text>
               </View>
-              <Image
+
+              <FastImage
                 style={styles.image}
                 source={{
-                  uri: 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/56/45/46/5645464b-7fad-b6ea-6c15-9dbf754a8d83/23UMGIM68667.rgb.jpg/100x100bb.jpg',
+                  uri: item.artworkUrl100,
                 }}
               />
             </View>
