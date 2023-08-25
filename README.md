@@ -13,7 +13,7 @@ This project fetches the most-played Apple Music albums from the provided API UR
 - **Image Caching:** Utilizes image caching methods to enhance image loading performance and efficiency.
 
 Note-
-This project is intended for learning purposes and as a starting point for implementing the specified features. Customize and enhance the project as per your requirements before deploying to production.
+This project is intended for learning purposes and as a starting point for implementing the specified features.
 
 For inquiries or support, contact payalmeena032@gmail.com.
 
